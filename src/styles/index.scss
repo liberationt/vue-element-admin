@@ -1,0 +1,416 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './btn.scss';
+
+body {
+  height: 100%;
+  color: #333;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+aside {
+  background: #eef1f6;
+  padding: 8px 24px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  display: block;
+  line-height: 32px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+//main-container全局样式
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1280px) {
+  .homePageMain {
+    width: 1280px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .homePageSearch {
+    width: 40% !important;
+
+    .el-input--medium .el-input__inner {
+      height: 50px !important;
+      font-size: 26px;
+    }
+
+    .el-input-group__append,
+    .el-input-group__prepend {
+      background: #1e50ae;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+    }
+
+    .el-input-group {
+      border: 2px solid #1e50ae;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .homePageSearch {
+    margin-top: 10px;
+    width: 40% !important;
+
+    .el-input--medium .el-input__inner {
+      height: 40px !important;
+      font-size: 26px;
+    }
+
+    .el-input-group__append,
+    .el-input-group__prepend {
+      background: #1e50ae;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+    }
+
+    .el-input-group {
+      border: 2px solid #1e50ae;
+      border-radius: 5px;
+    }
+  }
+}
+
+.el-carousel__button {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  background: #333;
+}
+
+@media screen and (max-width: 1280px) {
+  .mainWidth {
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mainWidth {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.mainWidths {
+  width: 96%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1440px) {
+  .mainWidths {
+    width: 1400px;
+  }
+  .content{
+    width:1440px;
+    margin:0 auto;
+  }
+}
+.displayFlex {
+  display: flex;
+  align-items: center;
+}
+
+.inforDetailCheck::-webkit-scrollbar {
+  width: 10px !important;
+  background: #def4f5;
+  border-radius: 10px;
+  height: 10px !important;
+}
+
+.inforDetailCheck::-webkit-scrollbar-thumb {
+  background: #d6dddd !important;
+  border-radius: 10px;
+  width: 10px !important;
+}
+
+.orderInofCheek::-webkit-scrollbar {
+  width: 10px !important;
+  background: #def4f5;
+  border-radius: 10px;
+}
+
+.orderInofCheek::-webkit-scrollbar-thumb {
+  background: #d6dddd !important;
+  border-radius: 10px;
+}
+
+.checkData::-webkit-scrollbar {
+  width: 10px !important;
+  background: #def4f5;
+  border-radius: 10px;
+  height: 10px !important;
+}
+
+.checkData::-webkit-scrollbar-thumb {
+  background: #d6dddd !important;
+  border-radius: 10px;
+
+}
+
+.inforDetail .el-checkbox {
+  display: block;
+}
+
+.el-collapse-item__header {
+  padding-left: 10px;
+  color: #1890ff;
+}
+
+.submit .el-form-item__error {
+  font-size: 16px;
+}
+
+.submit .el-checkbox {
+  .el-checkbox__label {
+    font-size: 16px;
+    color: #A8ABB0;
+  }
+}
+
+// .my-tree .el-tree-node__content label.el-checkbox .el-checkbox__input {
+//   display: none !important;
+// }
+
+.my-tree .el-tree-node__content>label.el-checkbox .el-checkbox__input {
+  display: none !important;
+}
+
+.my-tree .el-tree-node__content>.is-leaf+label.el-checkbox .el-checkbox__input {
+  display: inline-block !important;
+}
+
+// .supCheckBox .el-checkbox-button {
+//   margin-right: 10px !important
+// }
+
+.supCheckBox .el-checkbox-button .el-checkbox-button__inner {
+  border-radius: 5px !important;
+  padding: 10 50px !important;
+}
+
+// .my-tree {
+//   .el-tree-node {
+//     .el-checkbox__input .el-checkbox__inner {
+//       display: none !important;
+//     }
+//     .is-leaf+.el-checkbox .el-checkbox__inner {
+//       display: inline-block !important;
+//     }
+//   }
+// }
+
+// el-checkbox-button--medium
+$directions:("t":"top", "b":"bottom", "l":"left", "r":"right");
+$dimensions:("p":"padding", "m":"margin");
+.dialog{
+  .el-dialog{
+      width:350px !important;
+      height:200px;
+  }
+}
+@each $dim in $dimensions {
+  @each $dir in $directions {
+    @for $i from 1 through 180 {
+      $size: $i*1;
+
+      .#{nth($dim,1)}#{nth($dir,1)}#{$size} {
+        #{nth($dim,2)}-#{nth($dir,2)}: #{$size}px;
+      }
+    }
+  }
+}
+
+@for $j from 1 through 100 {
+  .font#{$j} {
+    font-size: $j * 1px;
+  }
+}
